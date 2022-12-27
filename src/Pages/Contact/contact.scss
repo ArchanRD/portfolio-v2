@@ -1,0 +1,415 @@
+.contact {
+  background-color: #181822;
+  height: 946px;
+
+  .alert__success {
+    color: #63b98f;
+    background-color: #151419;
+    width: max-content;
+    margin: auto;
+    padding: 10px;
+    border-radius: 4px;
+    border: 1px solid #549b78;
+    text-align: center;
+    font-size: 18px;
+  }
+
+  .title {
+    font-size: 2.5rem;
+    color: rgb(250, 250, 250);
+    font-family: "M PLUS 1", serif;
+    font-weight: 600;
+    text-align: center;
+    margin: 20px 0;
+  }
+
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 70%;
+    margin: auto;
+    padding: 20px 10px;
+
+    .col {
+      //   width: 50%;
+      color: rgb(250, 250, 250);
+      font-family: "M PLUS 1", serif;
+
+      &.col-1 {
+        width: 40%;
+        // border: 1px solid white;
+        padding: 10px 30px;
+
+        .text__tp {
+          .text {
+            font-weight: 600;
+            font-size: 40px;
+            letter-spacing: 1px;
+
+            .hlgt {
+              color: #549b78;
+            }
+          }
+        }
+
+        .socials {
+          .social__group {
+            // margin: 30px 0;
+            a {
+              text-decoration: none;
+              color: white;
+              display: flex;
+              align-items: center;
+              gap: 10px;
+              width: max-content;
+              transition: all linear 0.1s;
+
+              .social__text {
+                font-size: 22px;
+                // margin: 0;
+              }
+
+              .icon {
+                font-size: 25px;
+              }
+
+              &:hover {
+                text-decoration: underline;
+                color: #63b98f;
+              }
+            }
+          }
+        }
+      }
+
+      &.col-2 {
+        width: 40%;
+        .contact__form {
+          .form__group__detail {
+            display: flex;
+            gap: 20px;
+            .form__group {
+              label {
+                font-family: "Ubuntu" "M PLUS 1", serif;
+                font-weight: 500;
+                display: block;
+                font-size: 23px;
+              }
+
+              .input {
+                background-color: #36343c;
+                border: none;
+                outline: none;
+                border-radius: 6px;
+                padding: 10px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                margin-top: 8px;
+                border: 2px solid transparent;
+                transition: border linear 0.1s;
+                width: 100%;
+
+                &:focus {
+                  border: 2px solid #63b98f;
+                }
+              }
+
+              input[type="text"] {
+                font-size: 23px;
+                color: rgb(250, 250, 250);
+              }
+              input[type="email"] {
+                font-size: 23px;
+                color: rgb(250, 250, 250);
+              }
+            }
+          }
+
+          .form__group__message {
+            .form__group {
+              margin-bottom: 15px;
+              label {
+                font-family: "Ubuntu", "M PLUS 1", serif;
+                // font-weight: 500;
+                display: block;
+                font-size: 23px;
+              }
+
+              textarea {
+                background-color: #36343c;
+                border: none;
+                outline: none;
+                border-radius: 6px;
+                color: rgb(250, 250, 250);
+                font-size: 23px;
+                width: 100%;
+                font-family: "Ubuntu", "M PLUS 1", serif;
+                padding: 10px;
+                box-sizing: border-box;
+                margin-bottom: 10px;
+                margin-top: 8px;
+                border: 2px solid transparent;
+                transition: border linear 0.1s;
+
+                &:focus {
+                  border: 2px solid #63b98f;
+                }
+              }
+            }
+          }
+
+          .submit__btn {
+            width: 100%;
+            background-color: transparent;
+            font-family: "Ubuntu", "M PLUS 1", serif;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 25px;
+            color: rgb(250, 250, 250);
+            border: 2px solid #63b98f;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+
+            .spinner {
+              @keyframes ldio-oao578s3qrk {
+                0% {
+                  transform: translate(-50%, -50%) rotate(0deg);
+                }
+                100% {
+                  transform: translate(-50%, -50%) rotate(360deg);
+                }
+              }
+              .ldio-oao578s3qrk div {
+                position: absolute;
+                width: 62px;
+                height: 62px;
+                border: 8px solid #549b78;
+                border-top-color: transparent;
+                border-radius: 50%;
+              }
+              .ldio-oao578s3qrk div {
+                animation: ldio-oao578s3qrk 1s linear infinite;
+                top: 50px;
+                left: 50px;
+              }
+              .loadingio-spinner-rolling-h3xjgj5kxs8 {
+                width: 24px;
+                height: 24px;
+                display: inline-block;
+                overflow: hidden;
+              }
+              .ldio-oao578s3qrk {
+                width: 100%;
+                height: 100%;
+                position: relative;
+                transform: translateZ(0) scale(0.24);
+                backface-visibility: hidden;
+                transform-origin: 0 0; /* see note above */
+              }
+              .ldio-oao578s3qrk div {
+                box-sizing: content-box;
+              }
+            }
+
+            &:hover {
+              border: 2px solid #549b78;
+            }
+          }
+          .reset {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 1200px) {
+  .contact {
+    .container {
+      width: 90%;
+
+      .col {
+        &.col-1 {
+          .text__tp {
+            .text {
+              font-size: 30px;
+            }
+          }
+          .socials {
+            .social__group {
+              a {
+                .social__text {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+        &.col-2 {
+          .contact__form {
+            .form__group__detail .form__group label,
+            .form__group__message .form__group label {
+              font-size: 20px;
+            }
+
+            .form__group__detail {
+              .form__group {
+                input[type="text"] {
+                  font-size: 20px;
+                }
+                input[type="email"] {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .form__group__message {
+              .form__group {
+                textarea {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .submit__btn {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 992px) {
+  .contact {
+    height: max-content;
+    .container {
+      flex-direction: column;
+      gap: 50px;
+      align-items: center;
+      .col {
+        &.col-1 {
+          width: 50%;
+          text-align: center;
+          .socials {
+            .social__group {
+              a {
+                justify-content: center;
+                width: max-content;
+                margin: auto;
+                .social__text {
+                  font-size: 18px;
+                }
+              }
+            }
+          }
+        }
+        &.col-2 {
+          width: 50%;
+          .contact__form {
+            .form__group__detail .form__group label,
+            .form__group__message .form__group label {
+              font-size: 20px;
+            }
+
+            .form__group__detail {
+              .form__group {
+                input[type="text"] {
+                  font-size: 20px;
+                }
+                input[type="email"] {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .form__group__message {
+              .form__group {
+                textarea {
+                  font-size: 20px;
+                }
+              }
+            }
+
+            .submit__btn {
+              font-size: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 637px) {
+  .contact {
+    .title {
+      font-size: 2.2rem;
+    }
+
+    .container {
+      .col {
+        &.col-1 {
+          width: 100%;
+          padding: 0;
+        }
+        &.col-2 {
+          width: 70%;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  .contact {
+    .title {
+      font-size: 2rem;
+    }
+
+    .container {
+      .col {
+        &.col-1 {
+          .text__tp {
+            .text {
+              font-size: 1.5rem;
+            }
+          }
+        }
+
+        &.col-2 {
+          width: 100%;
+          .contact__form {
+            .form__group__detail .form__group label,
+            .form__group__message .form__group label {
+              font-size: 18px;
+            }
+
+            .form__group__detail {
+              .form__group {
+                input[type="text"] {
+                  font-size: 15px;
+                }
+                input[type="email"] {
+                  font-size: 15px;
+                }
+              }
+            }
+
+            .form__group__message{
+              .form__group{
+                textarea{
+                  font-size: 15px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

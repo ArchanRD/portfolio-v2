@@ -1,0 +1,115 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.navbar {
+  padding: 10px 0;
+  background-color: #181822;
+  border-bottom: 1px solid #313140;
+
+  nav {
+    display: flex;
+    margin: 0 80px;
+    justify-content: space-between;
+    color: rgb(250, 250, 250);
+
+    .nav-brand {
+      .brand-link {
+        color: rgb(250, 250, 250);
+        text-decoration: none;
+        .brand-name {
+          font-family: "Nunito", serif;
+          font-weight: 400;
+          cursor: pointer;
+          .hlgt {
+            color: #69c397;
+          }
+        }
+      }
+
+      .menu {
+        display: none;
+      }
+    }
+
+    .nav-items {
+      ul {
+        display: flex;
+        list-style: none;
+        gap: 50px;
+        font-size: 20px;
+        padding: 0;
+
+        .nav-fff {
+          text-decoration: none;
+
+          .nav-link {
+            color: rgb(250, 250, 250);
+            text-decoration: none;
+            font-family: "M PLUS 1", serif;
+            transition: all ease 0.28s;
+            &:hover {
+              color: #69c397;
+            }
+            &.active {
+              color: #69c397;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px) {
+  .navbar {
+    nav {
+      .nav-brand {
+        display: flex;
+        width: 100%;
+        align-items: center;
+        justify-content: space-between;
+        .brand-link {
+          z-index: 18;
+          transition: all ease 0.3s;
+        }
+        .menu {
+          display: block;
+          color: white;
+          font-size: 30px;
+          z-index: 15;
+        }
+      }
+
+      .nav-items {
+        ul {
+          display: none;
+          &.active {
+            transition: all ease 0.3s;
+            position: absolute;
+            background: #1d1f2fb3;
+            width: 100%;
+            left: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            z-index: 10;
+            height: 100vh;
+            margin: 0;
+            backdrop-filter: blur(10px);
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 992px){
+  .navbar {
+    nav{
+      margin: auto 30px;
+    }
+  }
+}

@@ -1,0 +1,89 @@
+.skills{
+    height: 896px;
+    padding-bottom: 50px;
+    background-color: #181822;
+
+    .cont-fath{
+        .container{
+            width: calc(100vw - 300px);
+            margin: auto;
+            .title{
+                text-align: center;
+                color: white;
+                font-family: 'M PLUS 1', serif;
+                font-weight: 600;
+                font-size: 2.5rem;
+            }
+            .card-container{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 10px;
+                flex-wrap: wrap;
+                // border: 1px solid white;
+                width: calc(100% - 400px);
+                margin: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px){
+    .skills{
+        height: max-content;
+
+        .cont-fath{
+            .container{
+                width: 80%;
+                .card-container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 767px){
+    .skills{
+        .cont-fath{
+            .container{
+                width: 95%;
+                .title{
+                    font-size: 2.2rem;
+                }
+                .card-container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 454px){
+    .skills{
+        .cont-fath{
+            .container{
+                width: 95%;
+                .title{
+                    font-size: 2rem;
+                }
+                .card-container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
+@media (max-width: 375px){
+    .skills{
+        .cont-fath{
+            .container{
+                width: 100%;
+                .title{
+                    font-size: 2rem;
+                }
+                .card-container{
+                    width: 100%;
+                }
+            }
+        }
+    }
+}
