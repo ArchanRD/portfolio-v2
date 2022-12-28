@@ -12,12 +12,29 @@ import sql from "../../images/sql.png";
 import react from "../../images/react.png";
 import ubuntu from "../../images/ubuntu.png";
 import { motion, AnimatePresence } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const Myskills = ({ isVisible }) => {
   isVisible = true;
+
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
   return (
     <div className="skills">
       <Navbar myskills={"active"} />
+      <div className={`load ${loading ? 'fadeIn' : 'fadeOut'}`}>
+        <div className="loadingio-spinner-rolling-e58iwe9hqua">
+          <div className="ldio-6rj5t8puim">
+            <div></div>
+          </div>
+        </div>
+      </div>
       <AnimatePresence>
         {isVisible && (
           <motion.div
@@ -37,73 +54,77 @@ const Myskills = ({ isVisible }) => {
                   Skills
                 </motion.h1>
                 <div className="card-container">
-                  <motion.div 
-                    initial={{zIndex: 1, translateX: '-30px'}}
-                    animate={{translateX: '0'}}
-                    transition={{duration: .5}}
+                  <motion.div
+                    initial={{ zIndex: 1, translateX: "-30px" }}
+                    animate={{ translateX: "0" }}
+                    transition={{ duration: 0.5 }}
                   >
                     <Card image={HTML} langName={"Html"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{zIndex: 1,translateX: 'calc(-30px - 60px)'}}
-                    animate={{translateX: '0'}}
-                    transition={{duration: .5, delay: 0.1}}
+                  <motion.div
+                    initial={{ zIndex: 1, translateX: "calc(-30px - 60px)" }}
+                    animate={{ translateX: "0" }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                   >
                     <Card image={php} langName={"PHP"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{zIndex: 1,translateX: 'calc(-30px - 90px)'}}
-                    animate={{translateX: '0'}}
-                    transition={{duration: .5, delay: 0.1}}
+                  <motion.div
+                    initial={{ zIndex: 1, translateX: "calc(-30px - 90px)" }}
+                    animate={{ translateX: "0" }}
+                    transition={{ duration: 0.5, delay: 0.1 }}
                   >
                     <Card image={react} langName={"React"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{zIndex: 1,translateX: 'calc(-30px - 120px)'}}
-                    animate={{translateX: '0'}}
-                    transition={{duration: .5, delay: 0.12}}
+                  <motion.div
+                    initial={{ zIndex: 1, translateX: "calc(-30px - 120px)" }}
+                    animate={{ translateX: "0" }}
+                    transition={{ duration: 0.5, delay: 0.12 }}
                   >
                     <Card image={git} langName={"Git and Github"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{zIndex: 1,translateX: 'calc(-30px - 150px)'}}
-                    animate={{translateX: '0'}}
-                    transition={{duration: .5, delay: 0.13}}
+                  <motion.div
+                    initial={{ zIndex: 1, translateX: "calc(-30px - 150px)" }}
+                    animate={{ translateX: "0" }}
+                    transition={{ duration: 0.5, delay: 0.13 }}
                   >
                     <Card image={bootstrap} langName={"Bootstrap"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{opacity: 0, translateY: '-290px'}}
-                    animate={{opacity: 1, translateY: '0'}}
-                    transition={{duration: .5, delay: 0.5}}
+                  <motion.div
+                    initial={{ opacity: 0, translateY: "-290px" }}
+                    animate={{ opacity: 1, translateY: "0" }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     <Card image={js} langName={"Javascript"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{opacity: 0,translateY: '-290px'}}
-                    animate={{opacity: 1,translateY: '0'}}
-                    transition={{duration: .5, delay: 0.5, ease: "easeInOut"}}
+                  <motion.div
+                    initial={{ opacity: 0, translateY: "-290px" }}
+                    animate={{ opacity: 1, translateY: "0" }}
+                    transition={{
+                      duration: 0.5,
+                      delay: 0.5,
+                      ease: "easeInOut",
+                    }}
                   >
                     <Card image={css} langName={"Css"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{opacity: 0,translateY: '-290px'}}
-                    animate={{opacity: 1,translateY: '0'}}
-                    transition={{duration: .5, delay: 0.5}}
+                  <motion.div
+                    initial={{ opacity: 0, translateY: "-290px" }}
+                    animate={{ opacity: 1, translateY: "0" }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     <Card image={sql} langName={"SQL"} />
                   </motion.div>
                   <motion.div
-                    initial={{opacity: 0,translateY: '-290px'}}
-                    animate={{opacity: 1,translateY: '0'}}
-                    transition={{duration: .5, delay: 0.5}}
-                  > 
+                    initial={{ opacity: 0, translateY: "-290px" }}
+                    animate={{ opacity: 1, translateY: "0" }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
+                  >
                     <Card image={ubuntu} langName={"Ubuntu"} />
                   </motion.div>
-                  <motion.div 
-                    initial={{opacity: 0,translateY: '-290px'}}
-                    animate={{opacity: 1,translateY: '0'}}
-                    transition={{duration: .5, delay: 0.5}}
+                  <motion.div
+                    initial={{ opacity: 0, translateY: "-290px" }}
+                    animate={{ opacity: 1, translateY: "0" }}
+                    transition={{ duration: 0.5, delay: 0.5 }}
                   >
                     <Card image={figma} langName={"Figma"} />
                   </motion.div>

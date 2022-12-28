@@ -1,6 +1,57 @@
 .about {
   background-color: #181822;
   height: 946px;
+  .load {
+    margin: 20px;
+
+    &.fadeOut {
+      opacity: 0;
+      transition: width 0.3s 0.3s, height 0.3s 0.3s, opacity 0.3s;
+    }
+    &.fadeIn {
+      opacity: 1;
+      transition: width 0.3s, height 0.3s, opacity 0.3s 0.3s;
+    }
+    @keyframes ldio-6rj5t8puim {
+      0% {
+        transform: translate(-50%, -50%) rotate(0deg);
+      }
+      100% {
+        transform: translate(-50%, -50%) rotate(360deg);
+      }
+    }
+    .ldio-6rj5t8puim div {
+      position: absolute;
+      width: 60px;
+      height: 60px;
+      border: 10px solid #69c397;
+      border-top-color: transparent;
+      border-radius: 50%;
+    }
+    .ldio-6rj5t8puim div {
+      animation: ldio-6rj5t8puim 1s linear infinite;
+      top: 50px;
+      left: 50px;
+    }
+    .loadingio-spinner-rolling-e58iwe9hqua {
+      width: 30px;
+      height: 30px;
+      display: inline-block;
+      overflow: hidden;
+      background: transparent;
+    }
+    .ldio-6rj5t8puim {
+      width: 100%;
+      height: 100%;
+      position: relative;
+      transform: translateZ(0) scale(0.3);
+      backface-visibility: hidden;
+      transform-origin: 0 0; /* see note above */
+    }
+    .ldio-6rj5t8puim div {
+      box-sizing: content-box;
+    }
+  }
   .title {
     font-family: "M PLUS 1", serif;
     font-weight: 600;

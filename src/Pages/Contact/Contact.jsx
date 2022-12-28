@@ -1,7 +1,7 @@
 import Navbar from "../../Components/Navbar/Navbar";
 import "./contact.scss";
 import { motion } from "framer-motion";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import emailjs from "@emailjs/browser";
 
 const Contact = () => {
@@ -33,9 +33,13 @@ const Contact = () => {
           "d_zPiJwge5DkQhugN"
         )
         .then((res) => {
-          setTimeout(() => {
-            setAlert(false)
-          }, 2000, setAlert(true));
+          setTimeout(
+            () => {
+              setAlert(false);
+            },
+            2000,
+            setAlert(true)
+          );
         });
 
       setName("");
@@ -49,17 +53,36 @@ const Contact = () => {
   const [email, setEmail] = useState("");
   const [message, setMessage] = useState("");
   const [spin, setSpin] = useState(false);
-  const [submit, setSubmit] = useState(false);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
 
   return (
     <div className="contact">
       <Navbar contact={"active"} />
+
+      <div className={`load ${loading ? 'fadeIn' : 'fadeOut'}`}>
+        <div className="loadingio-spinner-rolling-e58iwe9hqua">
+          <div className="ldio-6rj5t8puim">
+            <div></div>
+          </div>
+        </div>
+      </div>
+
       {Alert && (
-        <motion.div 
-        initial={{opacity:0, translateY: "-50px"}}
-        animate={{opacity:1, translateY: "10px"}}
-        transition={{duration: 0.5, type:"spring", stiffness: 100}}
-        className="alert__success">Message sent!</motion.div>
+        <motion.div
+          initial={{ opacity: 0, translateY: "-50px" }}
+          animate={{ opacity: 1, translateY: "10px" }}
+          transition={{ duration: 0.5, type: "spring", stiffness: 100 }}
+          className="alert__success"
+        >
+          Message sent!
+        </motion.div>
       )}
       <div className="title">Contact</div>
       <div className="container">

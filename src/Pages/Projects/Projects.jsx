@@ -3,8 +3,18 @@ import "./projects.scss";
 import Navbar from "../../Components/Navbar/Navbar";
 import ProjectCard from "../../Components/ProjectCard/ProjectCard";
 import { motion, useScroll } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const Projects = () => {
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    setLoading(true);
+    setTimeout(() => {
+      setLoading(false);
+    }, 1000);
+  }, []);
+
   const projectCardDetails = [
     {
       id: 1,
@@ -62,6 +72,13 @@ const Projects = () => {
   return (
     <div className="projects">
       <Navbar projects={"active"} />
+      <div className={`load ${loading ? 'fadeIn' : 'fadeOut'}`}>
+        <div className="loadingio-spinner-rolling-e58iwe9hqua">
+          <div className="ldio-6rj5t8puim">
+            <div></div>
+          </div>
+        </div>
+      </div>
       <div className="title">Projects</div>
       <div className="container">
         {projectCardDetails.map((data) => {
@@ -70,7 +87,7 @@ const Projects = () => {
               key={data.id}
               initial={{ opacity: 0, translateY: "50px" }}
               whileInView={{ opacity: 1, translateY: "0" }}
-              transition={{duration: 0.4}}
+              transition={{ duration: 0.4 }}
             >
               <ProjectCard
                 name={data.name}
